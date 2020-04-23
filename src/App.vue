@@ -253,32 +253,12 @@ export default {
     // You need to recreate the game!
     // 20 points
     moveLeft(){
-       for(var indexRow=0;indexRow<this.size;indexRow++){
-        for(var indexColumn = 3; indexColumn > 0; indexColumn--){
-          var moveToIndex = indexRow*this.size+indexColumn;
-          var moveFromIndex = moveToIndex + 1;
-
-          var moveToValue = this.table[moveToIndex];
-          var moveFromValue = this.table[moveFromIndex];
-
-
-          
-          if(moveFromValue == moveToValue && moveFromValue != 0){
-            this.table[moveToIndex] = moveFromValue * 2;
-            this.table[moveFromIndex] = 0;
-          }
-          
-          else if(moveToValue == 0 && moveFromValue != 0){
-            this.table[moveToIndex] = moveFromValue;
-            this.table[moveFromIndex] = 0;
-            indexRow = -1;
-          }
-          
-        }
-      }
+      
+      
       
       this.generateRandomNumber();
-      this.repaint();     
+      this.repaint();   
+
     },
 
     // You need to recreate the game!
